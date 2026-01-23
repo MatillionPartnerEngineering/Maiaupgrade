@@ -39,16 +39,12 @@ migration_project/
 ├── _templates_prompt_library/
 │   ├── MigrationStrategyandPlanTemplate.md
 │   ├── MassValidation.md
-│   ├── refactor_components.md
-│   └── other reusable templates
+│   ├── migration_documentation.md
 │
 ├── customer_migration_workspace/
-│   ├── MigrationStrategyandPlan.md
-│   ├── migration_documentation.md
+│   ├── CUSTOMER_MigrationStrategyandPlan.md
 │   ├── component_details.csv
 │   ├── MAUD.md
-│   ├── <WORKLOAD>.json
-│   └── refactor_components.md
 │
 └── validation_reports/
     ├── <WORKLOAD>_Validation_Report.md
