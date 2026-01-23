@@ -26,7 +26,7 @@ Workspace: customer_migration_workspace
 > It always reflects the **next highest-impact steps** required to move the migration forward.
 
 - [ ] Confirm **Customer Name** and **Initial Workload**
-- [ ] Upload and verify all required source files in `customer_migration_workspace`
+- [ ] Upload and verify all required source files in `migration_project`
 - [ ] Complete **Phase 0: Pre-Migration Checklist**
 - [ ] Provision DPC Agent and confirm connectivity
 - [ ] Approve **Refactor Discovery** scan (Phase 3)

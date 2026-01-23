@@ -41,13 +41,14 @@ migration_project/customer_migration_workspace/
 ### Step 0.2: Supporting File Validation
 
 Verify the following files exist **inside customer_migration_workspace**:
-
-- MigrationStrategyandPlan.md
-- migration_documentation.md
 - component_details.csv
 - MAUD.md
-- [WORKLOAD].json
-- MassValidation.md
+
+Verify the following files exist **inside _templates_prompt_library**:
+- MigrationStrategyandPlanTemplate.md
+- migration_documentation.md
+- massvalidation.md
+
 
 Do not proceed if any file is missing.
 
