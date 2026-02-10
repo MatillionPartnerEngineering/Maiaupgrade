@@ -61,7 +61,7 @@ Secrets are discovered continuously but **tracked here**.
 
 ### Project-Related Assets
 
-- [ ] Python libraries from MAUD.md uploaded
+- [ ] Python libraries from `MAUD.md` uploaded
 - [ ] JDBC drivers deployed and configured
 
 ---
@@ -79,7 +79,7 @@ Secrets are discovered continuously but **tracked here**.
 
 - [ ] User approval obtained
 - [ ] Read-only scan executed
-- [ ] refactor_components.md generated/updated
+- [ ] `refactor_components.md` generated or updated
 - [ ] Severity assigned and reviewed
 
 ---
@@ -97,11 +97,12 @@ Secrets are discovered continuously but **tracked here**.
 ### Gating Rules
 
 A workload is **Complete** only when:
-- All Blocker refactors are Completed
-- All required secrets are Validated
+
+- All **Blocker** refactors are completed
+- All required **Secrets** are validated
 - Validation passes
-- Successful Run confirmed
+- **Successful Run** is confirmed
 
 Validation reports are stored in:
 
-migration_project/validation_reports/
+`migration_project/validation_reports/`
