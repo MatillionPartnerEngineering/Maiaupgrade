@@ -50,7 +50,7 @@ migration_project/
 │   ├── MAUD.md
 │   └── refactor_components.md
 └── validation_reports/                     <-- Detailed validation reports
-plaintext```
+```
 
 ## 📘 Core Files Explained
 
