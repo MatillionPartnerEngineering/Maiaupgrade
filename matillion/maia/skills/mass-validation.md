@@ -6,7 +6,7 @@ Validation does NOT perform refactor.
 
 ## Inputs
 - Workload folder: [FOLDER_NAME]
-- component_details.csv
+- pipeline_component_inventory.md
 - migration_documentation.md (refactor rule reference only)
 
 ---
@@ -53,7 +53,7 @@ If a condition below is detected:
 
 ### 1️⃣ Python & Jython Components
 **Reference:** `migration_documentation.md → Upgrade: Python`
-Also able to be found in component_details.csv in workload filepath
+Also able to be found in pipeline_component_inventory.md in workload filepath
 
 Flag when:
 - A **Python Script** component uses **Jython**
@@ -61,7 +61,7 @@ Flag when:
 - A **Jython** script uses `context.cursor()` or grid variables
 - A Python Script relies on a **persistent filesystem**
 - Python Script requires packages not available in DPC runtime
-- Interpreter type cannot be confirmed via `component_details.csv`
+- Interpreter type cannot be confirmed via `pipeline_component_inventory.md`
 
 Severity:
 - **Blocker**: Jython, Python 2, cursor usage, filesystem dependency
@@ -71,7 +71,7 @@ Severity:
 
 ### 2️⃣ Bash Script Components
 **Reference:** `migration_documentation.md → Upgrade: Bash scripts`
-Also able to be found in component_details.csv in workload filepath
+Also able to be found in pipeline_component_inventory.md in workload filepath
 
 Flag when:
 - A **Bash Script** component exists
@@ -87,7 +87,7 @@ Severity:
 
 ### 3️⃣ API Extract Components
 **Reference:** `migration_documentation.md → Upgrade: API Extract`
-Also able to be found in component_details.csv in workload filepath
+Also able to be found in pipeline_component_inventory.md in workload filepath
 
 Flag when:
 - API Extract component is present
@@ -103,7 +103,7 @@ Severity:
 
 ### 4️⃣ API Query Components
 **Reference:** `migration_documentation.md → Upgrade: API Query`
-Also able to be found in component_details.csv in workload filepath
+Also able to be found in pipeline_component_inventory.md in workload filepath
 
 Flag when:
 - API Query component exists
@@ -117,7 +117,7 @@ Severity:
 
 ### 5️⃣ Database Query / JDBC Components
 **Reference:** `migration_documentation.md → Upgrade: Database Query`
-Also able to be found in component_details.csv in workload filepath
+Also able to be found in pipeline_component_inventory.md in workload filepath
 
 Flag when:
 - Database type is not natively supported
@@ -132,7 +132,7 @@ Severity:
 
 ### 6️⃣ dbt Components
 **Reference:** `migration_documentation.md → Upgrade: dbt`
-Also able to be found in component_details.csv in workload filepath
+Also able to be found in pipeline_component_inventory.md in workload filepath
 
 Flag when:
 - Sync File Source component exists
@@ -173,7 +173,7 @@ Severity:
 
 ### 9️⃣ Iterators
 **Reference:** `migration_documentation.md → Upgrade: Iterators`
-Also able to be found in component_details.csv in workload filepath
+Also able to be found in pipeline_component_inventory.md in workload filepath
 
 Flag when:
 - Iterator uses **Stop On Condition = Yes**
@@ -185,7 +185,7 @@ Severity:
 
 ### 🔟 Temporary Tables
 **Reference:** `migration_documentation.md → Upgrade: Temporary tables`
-Also able to be found in component_details.csv in workload filepath
+Also able to be found in pipeline_component_inventory.md in workload filepath
 
 Flag when:
 - Temporary tables are referenced
@@ -255,7 +255,7 @@ Severity:
 ---
 
 ### 1️⃣6️⃣ Filter with Null Value
-**Reference:** `component_details → Filter`
+**Reference:** `pipeline_component_inventory.md → Filter`
 
 Flag when:
 - The Filter is set to null
@@ -269,7 +269,7 @@ Severity:
 ---
 
 ### 1️⃣7️⃣ Connector Authentication
-**Reference:** `component_details → [Name of any Connector category component]]`
+**Reference:** `pipeline_component_inventory.md → [Name of any Connector category component]`
 
 Flag when:
 - There is an unresolved authentication method
