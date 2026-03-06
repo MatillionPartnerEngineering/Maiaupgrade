@@ -46,8 +46,9 @@ It defines:
 
 migration_project/
 ├── customer_migration_workspace/           <-- Customer-related assets
-│   ├── component_details.csv
+│   ├── pipeline_component_inventory.md
 │   ├── MAUD.md
+│   ├── shared_jobs.md
 │   └── refactor_components.md
 └── validation_reports/                     <-- Detailed validation reports
 ```
@@ -109,18 +110,28 @@ All refactor guidance must originate from this file.
 
 ---
 
-### component_details.csv  
-**Ground truth for component presence and location**
+### pipeline_component_inventory.md
+**Ground truth for component presence, location, and migration classification**
+
+Contains every component across all pipelines with:
+
+- Pipeline path and component name
+- Component ID and usage count
+- Migration Type classification (Type 1 / Type 2 / Type 3)
+- OOM risk scores for Python/Bash components (when enriched by FDE Context Engine)
+- Refactor approach recommendations for Type 3 components
 
 Used to:
 
-- Locate components by exact pipeline path  
-- Detect Python, Jython, Bash, API, dbt, JDBC usage  
-- Identify shared pipelines  
-- Identify ingestion and output systems  
-- Tie refactor findings to concrete, auditable locations  
+- Locate components by exact pipeline path
+- Detect Python, Jython, Bash, API, dbt, JDBC usage
+- Identify shared pipelines (Type 3 `Unknown Component` entries)
+- Identify ingestion and output systems
+- Tie refactor findings to concrete, auditable locations
 
 This file powers both **refactor discovery** and **validation detection**.
+
+> **Note:** This file supersedes the legacy `component_details.csv`. The markdown format provides richer context (Type classification, risk scores) that Maia can use directly during discovery and validation.
 
 ---
 
