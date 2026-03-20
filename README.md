@@ -66,13 +66,27 @@ If you read **one file**, read this one.
         │   └── SKILL.md
         ├── migration-secrets/
         │   └── SKILL.md
+        ├── migration-secret-references/
+        │   └── SKILL.md
         ├── migration-documentation/
         │   └── SKILL.md
         ├── migration-create-table-partial-grid-variable/
         │   └── SKILL.md
         ├── migration-strategy-and-plan-template/
         │   └── SKILL.md
-        └── migration-weekly-update/
+        ├── migration-weekly-update/
+        │   └── SKILL.md
+        ├── migration-blocker-triage/
+        │   └── SKILL.md
+        ├── migration-test-execution/
+        │   └── SKILL.md
+        ├── migration-customer-actions/
+        │   └── SKILL.md
+        ├── migration-credentials-audit/
+        │   └── SKILL.md
+        ├── migration-environment-hardcoding/
+        │   └── SKILL.md
+        └── migration-infrastructure-prerequisites/
             └── SKILL.md
 
 migration_project/
@@ -135,10 +149,17 @@ Each skill activates automatically when relevant migration conditions are detect
 | `migration-automatic-variables` | Map automatic variables to DPC system variable syntax |
 | `migration-shared-jobs` | Unpack, export, import, and refactor shared jobs |
 | `migration-secrets` | Recreate secrets and credentials in DPC |
+| `migration-secret-references` | Fix incorrectly formatted secret references and missing concurrencyMethod |
 | `migration-documentation` | Master feature differences and migration specs |
-| `migration-strategy-and-plan-template` | Customer migration strategy with progress tracking |
 | `migration-create-table-partial-grid-variable` | Expand partial grid variables to full Create Table schema |
+| `migration-strategy-and-plan-template` | Customer migration strategy with progress tracking |
 | `migration-weekly-update` | Weekly migration status update template |
+| `migration-blocker-triage` | Escalation decision tree and blocker categorization for failures |
+| `migration-test-execution` | Phased test execution methodology for migrated workloads |
+| `migration-customer-actions` | Template for creating and tracking customer action items |
+| `migration-credentials-audit` | Pre-execution audit of hardcoded credentials and secret references |
+| `migration-environment-hardcoding` | Detect and remediate hardcoded environment references in pipelines |
+| `migration-infrastructure-prerequisites` | Pre-execution checklist for infrastructure dependencies |
 
 Each skill contains a `SKILL.md` file describing:
 

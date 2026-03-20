@@ -198,3 +198,5 @@ These skills support the migration lifecycle but are not triggered by validation
 | `migration-weekly-update` | Weekly migration status update template |
 | `migration-shared-jobs` | Unpack, export, import, and refactor shared jobs |
 | `migration-documentation` | Master feature differences and migration specs (fallback) |
+| `migration-secret-references` | Identifies and fixes incorrectly formatted secret references (`secretReferenceNameId`) and missing `concurrencyMethod` in migrated `database-query` components |
+| `migration-create-table-partial-grid-variable` | Expand partial grid variable definitions to full schema for Create Table components |
