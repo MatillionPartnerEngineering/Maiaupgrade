@@ -342,5 +342,5 @@ These guardrails ensure migrations remain safe, auditable, and repeatable.
 
 # Maintainers
 
-Matillion Professional Services
+Matillion Forward Deployed Engineering
 services@matillion.com
