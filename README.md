@@ -106,7 +106,25 @@ If you read **one file**, read this one.
         │   └── SKILL.md
         ├── migration-rds-query-validation/
         │   └── SKILL.md
-        └── migration-s3-iam-credential-setup/
+        ├── migration-s3-iam-credential-setup/
+        │   └── SKILL.md
+        ├── migration-python-credentials-refactor/
+        │   └── SKILL.md
+        ├── migration-python-library-compatibility/
+        │   └── SKILL.md
+        ├── migration-bash-wait-conversion/
+        │   └── SKILL.md
+        ├── secret-validation-lifecycle/
+        │   └── SKILL.md
+        ├── sequential-blocker-discovery/
+        │   └── SKILL.md
+        ├── configuration-vs-code-diagnosis/
+        │   └── SKILL.md
+        ├── variant-pipeline-batching/
+        │   └── SKILL.md
+        ├── framework-fix-prioritization/
+        │   └── SKILL.md
+        └── production-readiness-milestones/
             └── SKILL.md
 
 migration_project/
@@ -190,6 +208,15 @@ Each skill activates automatically when relevant migration conditions are detect
 | `migration-sns-authentication` | SNS Message component AWS auth setup, IAM permissions, and triage priority |
 | `migration-rds-query-validation` | RDS Query structural validation errors, skipped component issues, and credential conversion |
 | `migration-s3-iam-credential-setup` | S3/IAM credential configuration for Excel Query, SFTP, and S3 staging components |
+| `migration-python-credentials-refactor` | Detect and refactor hardcoded credentials in Python Script bodies; extract to DPC Secret Manager |
+| `migration-python-library-compatibility` | Detect Python library compatibility issues in DPC Python Pushdown (Snowpark), legacy upgrades (boto→boto3), ODBC limitations |
+| `migration-bash-wait-conversion` | Convert Bash Script sleep/wait commands to Snowflake SYSTEM$WAIT() or DPC-compatible alternatives |
+| `secret-validation-lifecycle` | Three-phase secret management (Inventory → Create/Register → Runtime Validate) for migrations |
+| `sequential-blocker-discovery` | 6-layer cascade order for migration blockers; plan fix order as fixing one reveals the next |
+| `configuration-vs-code-diagnosis` | Decision tree for classifying blockers as configuration (15 min) vs code refactor (2-3 hrs) |
+| `variant-pipeline-batching` | Identify and batch-fix weekend/legacy/v2 pipeline variants together to prevent re-discovery |
+| `framework-fix-prioritization` | Prioritize framework-level blockers that unblock 5-30 workloads with a single fix |
+| `production-readiness-milestones` | 7-step sequence from dev validation through ETL decommission for production cutover |
 
 Each skill contains a `SKILL.md` file describing:
 
