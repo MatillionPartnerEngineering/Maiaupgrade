@@ -1,3 +1,23 @@
+---
+name: migration-database-query
+description: Migrate Database Query components to DPC, including JDBC driver setup,
+  manifest configuration, and connection migration.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: database-query-migration
+  title: Database Query / JDBC component migration
+  reference: .matillion/maia/skills/migration-database-query/SKILL.md
+  body_anchor: database-query-migration
+  severity: blocker
+  applies_when:
+    component_types:
+    - database-query
+---
+
+<a id="database-query-migration"></a>
 # Upgrade: Database Query
 
 Reference: https://docs.matillion.com/metl/docs/migration-database-query/

@@ -1,3 +1,8 @@
+---
+name: migration-strategy-and-plan-template
+description: "Customer-facing migration strategy and plan template — fill in per engagement with workload list, type-distribution, and timeline."
+---
+
 # Matillion ETL → Data Productivity Cloud Migration Strategy – [CUSTOMER]
 
 Customer: [CUSTOMER]  

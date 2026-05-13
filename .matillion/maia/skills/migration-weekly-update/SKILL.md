@@ -1,3 +1,8 @@
+---
+name: migration-weekly-update
+description: "Weekly migration status update email template — populated by Maia for the FDE to send to the customer."
+---
+
 # 📧 Template: Weekly Migration Status Update
 
 ## Purpose

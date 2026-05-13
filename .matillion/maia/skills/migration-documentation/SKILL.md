@@ -1,3 +1,8 @@
+---
+name: migration-documentation
+description: "Reference documentation for Matillion ETL to DPC migration — feature differences, upgrade notes, and component-by-component guide."
+---
+
 # Matillion ETL → Data Productivity Cloud (DPC): Migration Feature Differences & Upgrade Notes
 
 > Source text provided by user (copied from Matillion migration documentation).  

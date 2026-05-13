@@ -1,8 +1,25 @@
 ---
 name: migration-postgresql
-description: PostgreSQL connector gotchas, driver behaviour, JSONB handling, case-sensitivity, and METL internal DB upgrade guidance during Matillion ETL to DPC migration.
+description: PostgreSQL connector gotchas, driver behaviour, JSONB handling, case-sensitivity,
+  and METL internal DB upgrade guidance during Matillion ETL to DPC migration.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: postgresql-connector-migration
+  title: PostgreSQL connector / METL internal DB upgrade
+  reference: .matillion/maia/skills/migration-postgresql/SKILL.md
+  body_anchor: postgresql-connector-migration
+  severity: warning
+  applies_when:
+    component_types:
+    - database-query
+    signals:
+    - postgresql-connector
 ---
 
+<a id="postgresql-connector-migration"></a>
 # Migration PostgreSQL Connectors
 
 ## When to Use

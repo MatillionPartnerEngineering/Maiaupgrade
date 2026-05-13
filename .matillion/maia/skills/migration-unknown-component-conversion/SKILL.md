@@ -1,8 +1,26 @@
 ---
-name: unknown-component-conversion
-description: Detect and convert unknown-orchestration components from Matillion ETL (METL) migration back to their proper DPC component types. Covers Excel Query conversion with a complete numeric-to-semantic parameter mapping, and provides an extensible framework for other component types.
+name: migration-unknown-component-conversion
+description: Detect and convert unknown-orchestration components from Matillion ETL
+  (METL) migration back to their proper DPC component types. Covers Excel Query conversion
+  with a complete numeric-to-semantic parameter mapping, and provides an extensible
+  framework for other component types.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: unknown-component-conversion
+  title: Unknown-component conversion (Excel Query, etc.)
+  reference: .matillion/maia/skills/migration-unknown-component-conversion/SKILL.md
+  body_anchor: unknown-component-conversion
+  severity: blocker
+  applies_when:
+    signals:
+    - unknown-component
+    - unknown-orchestration-component
 ---
 
+<a id="unknown-component-conversion"></a>
 # Unknown Component Conversion for Migrated Pipelines
 
 ## When to Use
