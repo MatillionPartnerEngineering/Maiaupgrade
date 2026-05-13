@@ -1,3 +1,23 @@
+---
+name: migration-automatic-variables
+description: Map Matillion ETL automatic variables to DPC system variables (job_id,
+  project_id, environment) during migration.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: automatic-variables-mapping
+  title: Automatic / system variable mapping
+  reference: 'migration_documentation.md → Upgrade: Automatic variables'
+  body_anchor: automatic-variables-mapping
+  severity: blocker
+  applies_when:
+    signals:
+    - automatic-variable-reference
+---
+
+<a id="automatic-variables-mapping"></a>
 # Upgrade: Automatic variables
 
 Reference: https://docs.matillion.com/metl/docs/migration-automatic-variables/

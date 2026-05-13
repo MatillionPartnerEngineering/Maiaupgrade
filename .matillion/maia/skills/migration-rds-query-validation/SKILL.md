@@ -1,8 +1,24 @@
 ---
 name: migration-rds-query-validation
-description: Detect and remediate structural validation errors in rds-query components migrated from Matillion ETL to DPC. Covers skipped component validation, credential conversion, and the validation-vs-runtime inconsistency.
+description: Detect and remediate structural validation errors in rds-query components
+  migrated from Matillion ETL to DPC. Covers skipped component validation, credential
+  conversion, and the validation-vs-runtime inconsistency.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: rds-query-validation
+  title: RDS Query structural validation
+  reference: .matillion/maia/skills/migration-rds-query-validation/SKILL.md
+  body_anchor: rds-query-validation
+  severity: blocker
+  applies_when:
+    component_types:
+    - rds-query
 ---
 
+<a id="rds-query-validation"></a>
 # RDS Query Structural Validation
 
 ## When to Use

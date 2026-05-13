@@ -1,3 +1,24 @@
+---
+name: migration-dbt
+description: Migrate dbt Core and Sync File Source components from METL to DPC, configuring
+  repositories and dbt version compatibility.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: dbt-migration
+  title: dbt Core / Sync File Source migration
+  reference: .matillion/maia/skills/migration-dbt/SKILL.md
+  body_anchor: dbt-migration
+  severity: blocker
+  applies_when:
+    component_types:
+    - dbt-core
+    - sync-file-source
+---
+
+<a id="dbt-migration"></a>
 # Upgrade: dbt
 
 Reference: https://docs.matillion.com/metl/docs/migration-dbt/

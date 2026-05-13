@@ -1,8 +1,27 @@
 ---
-name: migration-database-query-oracle
-description: Oracle-specific gotchas, performance tuning, and migration patterns for Database Query components during Matillion ETL to DPC migration. Covers fetch size, large table handling, data integrity, authentication, and the strategic shift toward native Oracle components.
+name: migration-oracle
+description: Oracle-specific gotchas, performance tuning, and migration patterns for
+  Database Query components during Matillion ETL to DPC migration. Covers fetch size,
+  large table handling, data integrity, authentication, and the strategic shift toward
+  native Oracle components.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: oracle-connector-migration
+  title: Oracle Database Query migration
+  reference: .matillion/maia/skills/migration-oracle/SKILL.md
+  body_anchor: oracle-connector-migration
+  severity: warning
+  applies_when:
+    component_types:
+    - database-query
+    signals:
+    - oracle-connector
 ---
 
+<a id="oracle-connector-migration"></a>
 # Migration Database Query — Oracle
 
 ## When to Use

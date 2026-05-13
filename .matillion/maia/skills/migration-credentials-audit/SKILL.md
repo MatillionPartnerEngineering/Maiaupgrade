@@ -1,8 +1,25 @@
 ---
 name: migration-credentials-audit
-description: Pre-execution audit of all hardcoded credentials, passwords, and secret references across migrated pipelines. Produces a structured inventory and migration plan for DPC Secret Manager.
+description: Pre-execution audit of all hardcoded credentials, passwords, and secret
+  references across migrated pipelines. Produces a structured inventory and migration
+  plan for DPC Secret Manager.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: credentials-audit
+  title: Pre-execution credential audit
+  reference: .matillion/maia/skills/migration-credentials-audit/SKILL.md
+  body_anchor: credentials-audit
+  severity: blocker
+  applies_when:
+    signals:
+    - hardcoded-credential
+    - credential-audit
 ---
 
+<a id="credentials-audit"></a>
 # Migration Credentials Audit
 
 ## When to Use

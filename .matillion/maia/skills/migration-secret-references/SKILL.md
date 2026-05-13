@@ -1,8 +1,28 @@
 ---
-name: secret-reference-fix
-description: Identifies and fixes incorrectly formatted secret references in database-query components migrated from Matillion ETL (METL) to Data Productivity Cloud (DPC). Covers the secretReferenceNameId migration issue and the missing concurrencyMethod parameter.
+name: migration-secret-references
+description: Identifies and fixes incorrectly formatted secret references in database-query
+  components migrated from Matillion ETL (METL) to Data Productivity Cloud (DPC).
+  Covers the secretReferenceNameId migration issue and the missing concurrencyMethod
+  parameter.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: secret-reference-fix
+  title: Secret reference format fix for database-query components
+  reference: .matillion/maia/skills/migration-secret-references/SKILL.md
+  body_anchor: secret-reference-fix
+  severity: blocker
+  applies_when:
+    component_types:
+    - database-query
+    signals:
+    - secret-reference
+    - secretReferenceNameId
 ---
 
+<a id="secret-reference-fix"></a>
 # Secret Reference Fix for Migrated Pipelin
 
 For security reasons, credentials such as secrets and passwords are **not migrated** from Matillion ETL to the Data Productivity Cloud.

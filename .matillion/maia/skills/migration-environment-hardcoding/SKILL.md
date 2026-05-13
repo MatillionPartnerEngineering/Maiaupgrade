@@ -1,8 +1,27 @@
 ---
 name: migration-environment-hardcoding
-description: Detect and remediate hardcoded environment references (PRODUCTION database names, S3 paths, SNS topics) in migrated pipelines. Replace with parameterized variables or Environment Defaults.
+description: Detect and remediate hardcoded environment references (PRODUCTION database
+  names, S3 paths, SNS topics) in migrated pipelines. Replace with parameterized variables
+  or Environment Defaults.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: environment-hardcoding
+  title: Hardcoded environment-specific references
+  reference: .matillion/maia/skills/migration-environment-hardcoding/SKILL.md
+  body_anchor: environment-hardcoding
+  severity: warning
+  applies_when:
+    signals:
+    - hardcoded-environment
+    - hardcoded-database-name
+    - hardcoded-s3-path
+    - hardcoded-sns-topic
 ---
 
+<a id="environment-hardcoding"></a>
 # Migration Environment Hardcoding Remediation
 
 ## When to Use

@@ -1,8 +1,25 @@
 ---
 name: migration-variables
-description: Use when refactoring variables, automatic variables, export variables, or system variables during Matillion ETL to DPC migration.
+description: Use when refactoring variables, automatic variables, export variables,
+  or system variables during Matillion ETL to DPC migration.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: variables-migration
+  title: Variable migration (automatic / export / system)
+  reference: 'migration_documentation.md → Upgrade: variables'
+  body_anchor: variables-migration
+  severity: warning
+  applies_when:
+    signals:
+    - variable-reference
+    - automatic-variable-reference
+    - export-variable
 ---
 
+<a id="variables-migration"></a>
 # Variables Migration Guide
 
 Reference: https://docs.matillion.com/metl/docs/migration-variables/

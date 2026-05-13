@@ -1,8 +1,24 @@
 ---
 name: migration-salesforce-query-load
-description: Salesforce Query and Salesforce Load component gotchas, authentication patterns, API selection, and migration guidance for Matillion ETL to DPC migration.
+description: Salesforce Query and Salesforce Load component gotchas, authentication
+  patterns, API selection, and migration guidance for Matillion ETL to DPC migration.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: salesforce-query-load-migration
+  title: Salesforce Query / Load component migration
+  reference: .matillion/maia/skills/migration-salesforce-query-load/SKILL.md
+  body_anchor: salesforce-query-load-migration
+  severity: warning
+  applies_when:
+    component_types:
+    - salesforce-query
+    - salesforce-load
 ---
 
+<a id="salesforce-query-load-migration"></a>
 # Migration Salesforce Query & Load
 
 ## When to Use

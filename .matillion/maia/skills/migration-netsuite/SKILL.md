@@ -1,8 +1,28 @@
 ---
 name: migration-netsuite
-description: NetSuite connector gotchas, authentication patterns, driver management, and performance tuning for Database Query (SuiteAnalytics JDBC), NetSuite Query, and NetSuite SuiteAnalytics components during Matillion ETL to DPC migration.
+description: NetSuite connector gotchas, authentication patterns, driver management,
+  and performance tuning for Database Query (SuiteAnalytics JDBC), NetSuite Query,
+  and NetSuite SuiteAnalytics components during Matillion ETL to DPC migration.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: netsuite-connector-migration
+  title: NetSuite connector migration
+  reference: .matillion/maia/skills/migration-netsuite/SKILL.md
+  body_anchor: netsuite-connector-migration
+  severity: warning
+  applies_when:
+    component_types:
+    - database-query
+    - netsuite-query
+    - netsuite-suite-analytics
+    signals:
+    - netsuite-connector
 ---
 
+<a id="netsuite-connector-migration"></a>
 # Migration NetSuite Connectors
 
 ## When to Use

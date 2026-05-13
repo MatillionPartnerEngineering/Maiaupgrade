@@ -1,8 +1,26 @@
 ---
 name: migration-hardcoded-credential-detection
-description: Detect and remediate hardcoded credentials (passwords, usernames, connection strings) in migrated Matillion ETL pipelines. Identifies plaintext secrets that should be converted to DPC secret references or environment variables.
+description: Detect and remediate hardcoded credentials (passwords, usernames, connection
+  strings) in migrated Matillion ETL pipelines. Identifies plaintext secrets that
+  should be converted to DPC secret references or environment variables.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: hardcoded-credential
+  title: Hardcoded credential detection and remediation
+  reference: .matillion/maia/skills/migration-hardcoded-credential-detection/SKILL.md
+  body_anchor: hardcoded-credential
+  severity: blocker
+  applies_when:
+    signals:
+    - hardcoded-credential
+    - plaintext-password
+    - plaintext-connection-string
 ---
 
+<a id="hardcoded-credential"></a>
 # Hardcoded Credential Detection and Remediation
 
 ## When to Use

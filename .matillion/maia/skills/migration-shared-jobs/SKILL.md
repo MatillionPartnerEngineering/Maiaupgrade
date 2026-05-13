@@ -1,3 +1,25 @@
+---
+name: migration-shared-jobs
+description: Migrate Matillion ETL shared jobs to DPC shared pipelines, handling mappings,
+  fan-in counts, and metlImplementationId references.
+schema_version: 1
+phases:
+- refactor
+- validation
+detection_rules:
+- id: shared-job-migration
+  title: Shared job → shared pipeline migration
+  reference: .matillion/maia/skills/migration-shared-jobs/SKILL.md
+  body_anchor: shared-job-migration
+  severity: blocker
+  applies_when:
+    component_types:
+    - shared-job
+    signals:
+    - shared-job-reference
+---
+
+<a id="shared-job-migration"></a>
 ## Shared jobs
 
 There are some additional factors to consider when upgrading a Matillion ETL shared job to a Data Productivity Cloud shared pipeline. To correctly upgrade shared jobs, use the process given below.
