@@ -48,9 +48,107 @@ detection_rules:
     severity: blocker
     applies_when:
       component_types: [sync-file-source, dbt-core]
+  - id: automatic-system-variables
+    title: Automatic / System Variables
+    reference: "migration_documentation.md → Upgrade: Automatic variables"
+    body_anchor: automatic-system-variables
+    severity: blocker
+    applies_when:
+      signals: [automatic-variable-reference]
+  - id: export-variables
+    title: Export Variables
+    reference: "migration_documentation.md → Upgrade: Export variables"
+    body_anchor: export-variables
+    severity: blocker
+    applies_when:
+      signals: [export-variable, grid-return-variable]
+  - id: iterators
+    title: Iterators
+    reference: "migration_documentation.md → Upgrade: Iterators"
+    body_anchor: iterators
+    severity: warning
+    applies_when:
+      component_types: [iterator]
+      signals: [stop-on-condition]
+  - id: temporary-tables
+    title: Temporary Tables
+    reference: "migration_documentation.md → Upgrade: Temporary tables"
+    body_anchor: temporary-tables
+    severity: blocker
+    applies_when:
+      signals: [temporary-table-reference]
+  - id: extract-nested-data-databricks
+    title: Extract Nested Data (Databricks)
+    reference: "migration_documentation.md → Upgrade: Extract Nested Data"
+    body_anchor: extract-nested-data-databricks
+    severity: advisory
+    applies_when:
+      component_types: [extract-nested-data]
+      project_types: [databricks]
+  - id: filter-databricks
+    title: Filter Components (Databricks)
+    reference: "migration_documentation.md → Upgrade: Filter"
+    body_anchor: filter-databricks
+    severity: warning
+    applies_when:
+      component_types: [filter]
+      project_types: [databricks]
+  - id: replicate
+    title: Replicate Components
+    reference: "migration_documentation.md → Upgrade: Replicate"
+    body_anchor: replicate
+    severity: advisory
+    applies_when:
+      component_types: [replicate]
+  - id: text-output-redshift
+    title: Text Output (Redshift)
+    reference: "migration_documentation.md → Upgrade: Text Output"
+    body_anchor: text-output-redshift
+    severity: warning
+    applies_when:
+      component_types: [text-output]
+      project_types: [redshift]
+  - id: transactions
+    title: Transactions
+    reference: "migration_documentation.md → Upgrade: Transactions"
+    body_anchor: transactions
+    severity: warning
+    applies_when:
+      signals: [transaction-block]
+  - id: filter-null-value
+    title: Filter with Null Value
+    reference: "migration_documentation.md → Upgrade: Filter"
+    body_anchor: filter-null-value
+    severity: warning
+    applies_when:
+      component_types: [filter]
+      signals: [null-value-field, blank-value-field]
+  - id: connector-authentication
+    title: Connector Authentication
+    reference: ".matillion/maia/skills/migration-secrets/SKILL.md"
+    body_anchor: connector-authentication
+    severity: warning
+    applies_when:
+      signals: [connector-authentication]
+  - id: transformation-comments
+    title: Transformation Comments
+    reference: "migration_documentation.md → Upgrade: SQL comments"
+    body_anchor: transformation-comments
+    severity: warning
+    applies_when:
+      component_types: [sql-script, calculator]
+      signals: [sql-line-comment]
+  - id: create-table-partial-grid-variable
+    title: Create Table Partial Grid Variable
+    reference: ".matillion/maia/skills/migration-create-table-partial-grid-variable/SKILL.md"
+    body_anchor: create-table-partial-grid-variable
+    severity: blocker
+    applies_when:
+      component_types: [create-table]
+      signals: [partial-grid-variable]
 ---
 
-> **Schema migration note (`schema_version: 1`)**: rules 1–6 below are promoted to structured `detection_rules`. Remaining rules stay prose-only in this PR and will be migrated in subsequent PRs. Consumers using `schema_version: 1` should treat un-promoted body sections as v0-style prose context. See `.matillion/maia/SCHEMA.md`.
+> **Schema migration note (`schema_version: 1`)**: every detection rule documented in the body is now promoted to structured `detection_rules`. See `.matillion/maia/SCHEMA.md` for the contract.
 
 # Migration Validation Skill
 
@@ -201,6 +299,7 @@ Flag when:
 
 ---
 
+<a id="automatic-system-variables"></a>
 ### 7️⃣ Automatic / System Variables
 **Reference:** `migration_documentation.md → Upgrade: Automatic variables`
 
@@ -215,6 +314,7 @@ Flag when:
 
 ---
 
+<a id="export-variables"></a>
 ### 8️⃣ Export Variables
 **Reference:** `migration_documentation.md → Upgrade: Export variables`
 
@@ -226,6 +326,7 @@ Flag when:
 
 ---
 
+<a id="iterators"></a>
 ### 9️⃣ Iterators
 **Reference:** `migration_documentation.md → Upgrade: Iterators`
 
@@ -236,6 +337,7 @@ Flag when:
 
 ---
 
+<a id="temporary-tables"></a>
 ### 🔟 Temporary Tables
 **Reference:** `migration_documentation.md → Upgrade: Temporary tables`
 
@@ -247,6 +349,7 @@ Flag when:
 
 ---
 
+<a id="extract-nested-data-databricks"></a>
 ### 1️⃣1️⃣ Extract Nested Data (Databricks)
 **Reference:** `migration_documentation.md → Upgrade: Extract Nested Data`
 
@@ -257,6 +360,7 @@ Flag when:
 
 ---
 
+<a id="filter-databricks"></a>
 ### 1️⃣2️⃣ Filter Components (Databricks)
 **Reference:** `migration_documentation.md → Upgrade: Filter`
 
@@ -268,6 +372,7 @@ Flag when:
 
 ---
 
+<a id="replicate"></a>
 ### 1️⃣3️⃣ Replicate Components
 **Reference:** `migration_documentation.md → Upgrade: Replicate`
 
@@ -278,6 +383,7 @@ Flag when:
 
 ---
 
+<a id="text-output-redshift"></a>
 ### 1️⃣4️⃣ Text Output (Redshift)
 **Reference:** `migration_documentation.md → Upgrade: Text Output`
 
@@ -289,6 +395,7 @@ Flag when:
 
 ---
 
+<a id="transactions"></a>
 ### 1️⃣5️⃣ Transactions
 **Reference:** `migration_documentation.md → Upgrade: Transactions`
 
@@ -300,6 +407,7 @@ Flag when:
 
 ---
 
+<a id="filter-null-value"></a>
 ### 1️⃣6️⃣ Filter with Null Value
 
 Flag when:
@@ -310,6 +418,7 @@ Flag when:
 
 ---
 
+<a id="connector-authentication"></a>
 ### 1️⃣7️⃣ Connector Authentication
 
 Flag when:
@@ -321,6 +430,7 @@ Flag when:
 
 ---
 
+<a id="transformation-comments"></a>
 ### 1️⃣8️⃣ Transformation Comments
 
 Flag when:
@@ -331,6 +441,7 @@ Flag when:
 
 ---
 
+<a id="create-table-partial-grid-variable"></a>
 ### 1️⃣9️⃣ Create Table Partial Grid Variable
 **Reference:** `.matillion/maia/skills/migration-create-table-partial-grid-variable/SKILL.md`
 
